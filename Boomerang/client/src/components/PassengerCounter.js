@@ -26,7 +26,7 @@ export default function PositionedMenu() {
         onClick={handleClick}
         style={{color:"white"}}
       >
-        Cabin Class
+        Passengers
         <KeyboardArrowDownIcon/>
       </Button>
       <Menu
@@ -44,16 +44,30 @@ export default function PositionedMenu() {
           horizontal: 'left',
         }}
       >
-          <MenuItem onClick={handleClose}>  Economy
+ 
+        <MenuItem onClick={handleClose}>  <TextField
+          id="outlined-number"
+          label="Adults"
+          type="number"
+          size="small"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          style={{width:"9rem"}}
+        />
         </MenuItem>
 
-        <MenuItem onClick={handleClose}>  Business-Class
+        <MenuItem onClick={handleClose}> <TextField
+          id="outlined-number"
+          label="Children"
+          type="number"
+          size="small"
+          InputLabelProps={{
+            shrink: true,
+          }}
+          style={{width:"9rem"}}
+        />
         </MenuItem>
-
-        <MenuItem onClick={handleClose}> First-Class
-        </MenuItem>
-
-        
    
       </Menu>
     </div>
